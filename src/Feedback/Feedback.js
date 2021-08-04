@@ -11,15 +11,15 @@ export default function Feedback() {
     const [bad, setBad] = useState(0);
     
     const countIncrementGood = () => {
-        setGood(good + 1);
+        setGood((prevState) => prevState + 1);
     };
 
     const countIncrementNeutral = () => {
-        setNeutral(neutral  + 1);
+        setNeutral((prevState) => prevState + 1);
     };
     
     const countIncrementBad = () => {
-        setBad(bad  + 1);
+        setBad((prevState) => prevState + 1);
     };
     
     const total = good + neutral + bad;
